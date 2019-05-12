@@ -2,9 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import Hero from '../components/hero'
-import Layout from '../components/layout'
-import ArticlePreview from '../components/article-preview'
+import CasePreview from '../components/case-preview'
+import Label from '../components/label'
+import styling from './index.module.scss'
 
 class RootIndex extends React.Component {
   render() {
@@ -13,24 +13,12 @@ class RootIndex extends React.Component {
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
 
     return (
-      <Layout location={this.props.location} >
-        <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
-          <Hero data={author.node} />
-          <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
-        </div>
-      </Layout>
+      <div className={styling.container}> 
+        <span> William Martinsson </span>
+        <h3>Design driven developer.<br/> Who belives in a world where developers and designers can live together. </h3>
+        <span>Some will call me a Digital designer others U who loves to develop unique interactive experiences. Currently doing my internship at Momkai in Amsterdam.</span>
+        <Label/>
+      </div> 
     )
   }
 }
@@ -87,3 +75,14 @@ export const pageQuery = graphql`
     }
   }
 `
+// <ul className="article-list">
+//       {siteTitle}
+//       {posts.map(({ node }) => {
+//         return (
+//           <li key={node.slug}>
+//             <CasePreview article={node} />
+//           </li>
+//         )
+//       })}
+//     </ul>
+//   )
