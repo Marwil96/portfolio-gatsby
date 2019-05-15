@@ -1,16 +1,9 @@
 import React from "react";
-
-const styling = {
-      color: 'white',
-      fontSize: 12,
-      textTransform: 'uppercase',
-      fontWeight: 700,
-      fontFamily: 'sans-serif'
-  };
+import styling from './common.module.scss'
 
 const Label = (props) => {
   return (
-   <span className="label" style={styling}>{props.label}</span>
+   <span className={styling.Label} style={styling}>{props.label}</span>
   )
 }
 

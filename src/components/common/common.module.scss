@@ -1,5 +1,76 @@
+.Header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: 100px;
+    padding-top: 42px;
+    padding-right:64px;
+    font-family: sans-serif;
+
+    span {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    a {
+        font-size: 16px;
+        font-weight: 600;
+        color: white;
+    }
+}
+
 .ProjectLink {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction:column;
+
+    span {
+        color: white;
+        margin: 0;
+        margin-bottom: 4px;
+        font-size: 16px;
+        font-weight: 300;
+        font-family: sans-serif;
+    }
+
+    h3 {
+        color: white;
+        margin: 0;
+        font-size: 36px;
+        font-weight: 700;
+        font-family: sans-serif;
+    }
+}
+
+.MainTextBlock {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: sans-serif;
+    max-width: 900px;
+    margin-bottom: 64px;
+
+    h1 {
+        font-weight: 700;
+        font-size: 42px;
+        margin: 0;
+        margin-bottom: 24px;
+    }
+
+    span {
+        margin: 0;
+        font-weight: 500;
+        font-size: 22px;
+        width: 70%;
+    }
+}
+
+.Label {
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 24px;
 }

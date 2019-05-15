@@ -4,7 +4,9 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import CasePreview from '../components/case-preview'
 import Label from '../components/common/Label.jsx'
-import ProjectLink from '../components/common/Label.jsx'
+import ProjectLink from '../components/common/ProjectLink.jsx'
+import MainTextBlock from '../components/common/MainTextBlock.jsx'
+import Header from '../components/common/Header.jsx'
 import styling from './index.module.scss'
 
 class RootIndex extends React.Component {
@@ -15,14 +17,10 @@ class RootIndex extends React.Component {
 
     return (
       <div className={styling.container}>
-        <div className={styling.header}>
-          <span> William Martinsson </span>
-          <a href="#lab">Lab</a>
-        </div>
-        <h3>Design driven developer.<br/> Who believes in a world where developers and designers can live together. </h3>
-        <span>Some will call me a Digital designer others U who loves to develop unique interactive experiences. Currently doing my internship at Momkai in Amsterdam.</span>
+        <Header /> 
+        <MainTextBlock/>
         <Label label='Right now...' />
-        <span className="alert-text">Available for freelance work and new opportunities.</span>
+        <span className={styling.alertText}>Available for freelance work and new opportunities.</span>
         <Label label='Handpicked cases like a bottle of wine' />
         <ProjectLink label='Product development & Fullstack' title='Bookingsystem' />
       </div> 
