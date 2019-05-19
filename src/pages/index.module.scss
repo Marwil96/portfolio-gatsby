@@ -1,17 +1,76 @@
+@font-face {
+	font-family: "Inter";
+	font-weight: 600;
+	src: url("../../static/fonts/Inter-Bold.woff2") format("woff2"),
+	     url("../../static/fonts/Inter-Bold.woff") format("woff"),
+}
+
+@font-face {
+	font-family: "Inter";
+	font-weight: 500;
+	src: url("../../static/fonts/Inter-Medium.woff2") format("woff2"),
+	     url("../../static/fonts/Inter-Medium.woff") format("woff"),
+}
+
+@font-face {
+	font-family: "Inter";
+	font-weight: 800;
+	src: url("../../static/fonts/Inter-Black.woff2") format("woff2"),
+	     url("../../static/fonts/Inter-Black.woff") format("woff"),
+}
+@font-face {
+	font-family: "Inter";
+	font-weight: 400;
+	src: url("../../static/fonts/Inter-Regular.woff2") format("woff2"),
+	     url("../../static/fonts/Inter-Regular.woff") format("woff"),
+}
+
 body {
 	margin: 0;
-	font-family: sans-serif;
+	font-family: 'Inter';
 }
 .container {
-	width:100%;
+	// width:100%;
 	min-height:100vh;
 	display: flex;
 	flex-direction: column;
 	background:black;
 	margin:0;
 	padding-left:64px;
+	padding-bottom: 120px;
+	color: white;
+	
+	.blockContainer {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 64px;
+	}
 
 	.alertText {
-	
+		font-size: 32px;
+		font-weight: 600;
+		// text-transform: uppercase;
+		text-decoration: underline;
+		margin-bottom: 64px;
+		max-width: 700px;
+	}
+
+	.linkText {
+		max-width: 800px;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 64px;
+		
+		a {
+			font-size: 32px;
+			font-weight: 700;
+			text-transform: uppercase;
+			text-decoration: underline;
+		}
+		
+		.nudgeText {
+		font-size: 8px;
+		margin-top: 8px;
+	}
 	}
 }
