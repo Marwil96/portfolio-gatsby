@@ -15,7 +15,9 @@ class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
+    // const rightNowText = get(this, 'props.data.allContentfulRightNow.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
+    console.log([author])
 
     return (
       <div className={styling.container}>
@@ -75,7 +77,8 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulPerson(filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }) {
+
+    allContentfulPerson {
       edges {
         node {
           name

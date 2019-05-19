@@ -29,6 +29,11 @@ body {
 	margin: 0;
 	font-family: 'Inter';
 }
+
+a {
+	cursor: pointer;
+}
+
 .container {
 	// width:100%;
 	min-height:100vh;
@@ -37,7 +42,7 @@ body {
 	background:black;
 	margin:0;
 	padding-left:64px;
-	padding-bottom: 120px;
+	padding-bottom: 64px;
 	color: white;
 	
 	.blockContainer {
